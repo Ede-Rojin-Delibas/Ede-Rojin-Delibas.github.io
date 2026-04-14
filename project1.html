@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Synthetic Data Generation System - Ede Rojin DELİBAŞ</title>
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <link rel="stylesheet" href="style.css?v=3.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -139,95 +139,6 @@
 </footer>
 
 </div>
-</body>
-</html>
 
-<h2>Data Sources</h2>
-<p>
-Unlike traditional data science projects, this system does not rely on a fixed dataset. Instead, it dynamically generates synthetic data or learns from user-provided datasets depending on the selected generation method.
-The project operates with two primary data sources:
-
-Synthetic Data (Generated Data):
-The system generates data from scratch based on user-defined parameters such as the number of rows, columns, and data types. This method does not require any real dataset and is designed for fast, flexible, and privacy-preserving data creation.
-
-User-Provided Dataset (Reference Data):
-For model-based data generation, users can upload a real dataset. The system then learns the statistical structure and relationships within the data using generative models. This enables the creation of synthetic datasets that closely resemble real-world data in terms of distribution and correlations.
-This dual approach allows the system to support both rapid data generation and high-fidelity synthetic data modeling, making it suitable for a wide range of use cases.
-
-</p>
-
-<h2>Methodology</h2>
-<p>
-The system is designed as a modular pipeline that supports multiple synthetic data generation approaches. The overall workflow consists of the following stages:
- 
-User Input & Configuration
-Users define the structure of the dataset, including the number of rows, columns, and data types. Alternatively, users can upload an existing dataset for model-based generation.
- 
-Data Generation Approach Selection
-The system provides two main generation methods:
-Random (Rule-Based) Generation: Data is generated using predefined rules and libraries without requiring a real dataset.
-Model-Based Generation: The system trains generative models on user-provided data to learn its statistical properties.
-
-Synthetic Data Generation
-In random generation, libraries such as Faker are used to create realistic categorical and structured data.
-In model-based generation, models such as CTGAN, TVAE, CopulaGAN, and Gaussian Copula are used to produce statistically similar datasets.
-
-Data Processing & Storage
-Generated datasets are processed using Pandas and stored efficiently for further use. The system ensures consistency and usability of the generated data.
-
-Quality Evaluation (Optional)
-Users can evaluate the quality of synthetic data by comparing it with real datasets using various metrics such as statistical similarity, correlation similarity, and machine learning efficacy.
-This workflow ensures flexibility, scalability, and usability for both technical and non-technical users.
-
-</p>
-
-<h2>Results & Evaluation</h2>
-<p>
-The system was evaluated based on both performance and data quality across different generation methods.
-
-Random Data Generation Results
-Data generation is fast and computationally efficient
-Each execution produces unique datasets due to stochastic behavior
-Logical consistency is maintained through predefined rules
-This method is highly suitable for testing, prototyping, and rapid development scenarios.
-
-Model-Based Data Generation Results
-Generated data closely matches the statistical properties of real datasets
-Distributions of numerical and categorical variables are preserved
-Relationships between variables (e.g., correlations) are successfully learned
-Rare categories are effectively represented
-Although this approach requires additional time for model training, it produces significantly more realistic and analytically useful data.
-
-Quality Evaluation Metrics
-To assess the quality of synthetic data, the following metrics were used:
-Statistical Similarity: Measures distribution alignment between real and synthetic data
-Correlation Similarity: Evaluates relationships between variables
-ML Efficacy: Assesses model performance trained on synthetic data
-Category Coverage: Measures how well categorical values are preserved
-
-The results demonstrate that model-based approaches, particularly CTGAN, provide high-quality synthetic data suitable for machine learning and analytical tasks.
-
-</p>
-
-<h2>Tech Stack</h2>
-<ul>
-<li>Python</li>
-<li>Flask</li>
-<li>SDV</li>
-<li>Pandas</li>
-</ul>
-
-<h2>Screenshots</h2>
-
-<img src="images/randsynt.png" width="600">
-<img src="images/modelbasesyn.png" width="600">
-<img src="images/prodmodelsyn.png" width="600">
-<img src="images/qualitymetrics.png" width="600">
-
-<footer>
-  <p>© 2026</p>
-</footer>
-
-</div>
 </body>
 </html>
