@@ -1,52 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Synthetic Data Generation System</title>
+  <title>Synthetic Data Generation System - Ede Rojin DELİBAŞ</title>
   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 <div class="container">
 
 <header>
-  <h3>Ede Rojin Delibaş</h3>
+  <h3>ERD</h3>
   <nav>
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
   </nav>
 </header>
 
-<h1>Synthetic Data Generation System</h1>
+<div class="project-detail">
 
-<h2>Introduction</h2>
-<p>
-In today's data-driven world, access to high-quality datasets is essential for building, testing, and validating machine learning models. However, real-world data is often limited due to privacy concerns, regulatory constraints, or availability issues. This creates a significant barrier for data scientists, researchers, and developers who need reliable data to experiment and innovate.
-Synthetic data has emerged as a powerful solution to this problem. By generating artificial datasets that preserve the statistical properties of real data, it becomes possible to simulate realistic scenarios without exposing sensitive information.
-This project focuses on developing a flexible and scalable synthetic data generation system that allows users to create customized datasets based on their specific needs. The system aims to support both numerical and textual data generation while maintaining realism, usability, and efficiency.
+  <div class="project-header">
+    <div class="category">Data Science</div>
+    <h1>Synthetic Data Generator</h1>
+    <p style="color: #999; margin-top: 15px;">AI-based system for generating realistic synthetic datasets</p>
+  </div>
 
-</p>
+  <img src="images/project1.png" alt="Synthetic Data Generator" class="project-image">
 
-<h2>Problem Statement</h2>
-<p>
-Despite the growing demand for data in machine learning and analytics, accessing high-quality and usable datasets remains a major challenge. Many datasets are either restricted due to privacy regulations, insufficient in size, unbalanced, or not representative of real-world scenarios.
-Additionally, generating test data for applications often requires significant manual effort, which can be time-consuming and inefficient. Existing solutions are either too complex, lack flexibility, or fail to produce realistic data distributions.
-This creates a gap for a user-friendly system that can generate synthetic data while preserving statistical integrity and allowing customization based on user-defined parameters.
+  <div class="project-section">
+    <h2>Overview</h2>
+    <p>
+      The Synthetic Data Generator is an intelligent system designed to address the critical gap between data demand and data availability in machine learning and analytics. This project leverages advanced AI techniques to create realistic, privacy-preserving synthetic datasets that maintain statistical integrity with real-world data.
+    </p>
+    <p>
+      Whether you're building ML models, testing applications, or conducting research, this system provides a flexible solution for generating high-quality synthetic data without exposing sensitive information.
+    </p>
+  </div>
 
-</p>
+  <div class="project-section">
+    <h2>Problem Statement</h2>
+    <p>
+      Data scarcity remains one of the most significant bottlenecks in data science and AI development:
+    </p>
+    <ul>
+      <li><strong>Privacy Constraints:</strong> Real-world data is often restricted by regulations like GDPR and HIPAA</li>
+      <li><strong>Data Imbalance:</strong> Datasets often suffer from class imbalance and skewed distributions</li>
+      <li><strong>Limited Availability:</strong> High-quality datasets are expensive and difficult to obtain</li>
+      <li><strong>Testing Challenges:</strong> Generating realistic test data for applications requires significant manual effort</li>
+      <li><strong>Complexity of Existing Tools:</strong> Current solutions lack flexibility and ease of use</li>
+    </ul>
+  </div>
 
-<h2>Objective</h2>
-<p>
-The main objective of this project is to design and develop a synthetic data generation system that enables users to easily create realistic and customizable datasets.
-Specifically, the system aims to:
-- Allow users to define the number of rows and columns
-- Support both numerical and textual data generation
-- Preserve statistical properties such as distribution, correlation, and variance
-- Provide an efficient and user-friendly interface
-- Enable data export for use in machine learning and analytical tasks
+  <div class="project-section">
+    <h2>Objectives</h2>
+    <p>This project aims to:</p>
+    <ul>
+      <li>Enable users to define custom dataset parameters (rows, columns, distributions)</li>
+      <li>Support both numerical and categorical data generation</li>
+      <li>Preserve statistical properties including correlations and variance</li>
+      <li>Provide an intuitive, user-friendly interface</li>
+      <li>Ensure data privacy and compliance with regulations</li>
+      <li>Export datasets in multiple formats (CSV, JSON, Parquet)</li>
+    </ul>
+  </div>
 
-By addressing these goals, the project seeks to simplify data access and accelerate experimentation in data science workflows.
+  <div class="project-tech">
+    <strong>Technologies & Tools:</strong>
+    <div class="tech-tags">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">TensorFlow</span>
+      <span class="tech-tag">Pandas</span>
+      <span class="tech-tag">NumPy</span>
+      <span class="tech-tag">Scikit-learn</span>
+      <span class="tech-tag">Synthetic Data Vault</span>
+      <span class="tech-tag">FastAPI</span>
+    </div>
+  </div>
 
-</p>
+  <div class="project-section">
+    <h2>Implementation Approach</h2>
+    <p>
+      The system is built using a modular architecture that combines multiple data generation strategies:
+    </p>
+    <ul>
+      <li><strong>Rule-Based Generation:</strong> Define constraints and patterns for specific data types</li>
+      <li><strong>GAN-Based Generation:</strong> Use Generative Adversarial Networks for realistic data synthesis</li>
+      <li><strong>Copula Models:</strong> Preserve complex correlations between variables</li>
+      <li><strong>Statistical Analysis:</strong> Match distributions of generated data to source datasets</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Custom parameter configuration for flexible data generation</li>
+      <li>Support for multiple data types and distributions</li>
+      <li>Privacy-preserving synthesis with differential privacy options</li>
+      <li>Quality metrics and validation reports</li>
+      <li>Batch processing for large-scale dataset generation</li>
+      <li>RESTful API for integration with existing pipelines</li>
+      <li>Web-based dashboard for easy configuration</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>Results & Impact</h2>
+    <p>
+      This project demonstrates the feasibility of generating synthetic data that closely matches real-world statistical properties while maintaining privacy. The system can be applied across industries to:
+    </p>
+    <ul>
+      <li>Accelerate machine learning model development and testing</li>
+      <li>Enable safe data sharing across organizations</li>
+      <li>Support research with realistic but privacy-safe datasets</li>
+      <li>Reduce costs associated with data collection and labeling</li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Projects</a>
+
+</div>
+
+<footer>
+  <p>© 2026 Ede Rojin DELİBAŞ. All rights reserved.</p>
+</footer>
+
+</div>
+</body>
+</html>
 
 <h2>Data Sources</h2>
 <p>

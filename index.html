@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ede Rojin Delibaş</title>
+  <title>Ede Rojin DELİBAŞ - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -11,47 +13,77 @@
 <header>
   <h3>ERD</h3>
   <nav>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Ede Rojin Delibaş</h1>
+  <h1>Ede Rojin DELİBAŞ</h1>
   <p>
     Building AI-driven systems and data science solutions for real-world problems.
   </p>
 </section>
 
 <div class="filter">
-  <button class="active">All</button>
-  <button>Data Science</button>
-  <button>AI Systems</button>
+  <button class="active" onclick="filterProjects('all')">ALL CATEGORIES</button>
+  <button onclick="filterProjects('data-science')">DATA SCIENCE</button>
+  <button onclick="filterProjects('ai-systems')">AI SYSTEMS</button>
 </div>
 
 <div class="grid">
 
-  <div class="card" onclick="location.href='project1.html'">
-    <img src="images/project1.png">
+  <div class="card" data-category="data-science" onclick="location.href='project1.html'">
+    <img src="images/project1.png" alt="Synthetic Data Generator">
     <div class="overlay">
       <h4>Synthetic Data Generator</h4>
       <p>AI-based data generation system</p>
     </div>
   </div>
 
-  <div class="card">
-    <img src="images/project2.png">
+  <div class="card" data-category="ai-systems" onclick="location.href='project2.html'">
+    <img src="images/project2.png" alt="Project Coming Soon">
     <div class="overlay">
       <h4>Coming Soon</h4>
+      <p>AI Systems Project</p>
+    </div>
+  </div>
+
+  <div class="card" data-category="data-science" onclick="location.href='project3.html'">
+    <img src="images/project3.png" alt="Project Coming Soon">
+    <div class="overlay">
+      <h4>Coming Soon</h4>
+      <p>Data Science Project</p>
     </div>
   </div>
 
 </div>
 
 <footer>
-  <p>© 2026</p>
+  <p>© 2026 Ede Rojin DELİBAŞ. All rights reserved.</p>
 </footer>
 
 </div>
+
+<script>
+function filterProjects(category) {
+  const cards = document.querySelectorAll('.card');
+  const buttons = document.querySelectorAll('.filter button');
+  
+  // Update active button
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  // Filter cards
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
 </body>
 </html>
