@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Synthetic Data Generation System - Ede Rojin DELİBAŞ</title>
-  <link rel="stylesheet" href="style.css?v=3.2">
+  <link rel="stylesheet" href="style.css?v=3.4">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -35,93 +35,193 @@
 
   <img src="images/synthetic_animation.jpg" alt="Synthetic Data Generator" class="project-image">
 
+  <!-- PROJECT EXPLANATION SECTION -->
   <div class="project-section">
-    <h2>Overview</h2>
+    <h2>1. Project Explanation</h2>
+    
+    <h3 style="margin-top: 40px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.1 Introduction</h3>
     <p>
-      The Synthetic Data Generator is an intelligent system designed to address the critical gap between data demand and data availability in machine learning and analytics. This project leverages advanced AI techniques to create realistic, privacy-preserving synthetic datasets that maintain statistical integrity with real-world data.
+      In today's data-driven world, access to high-quality datasets is essential for building, testing, and validating machine learning models. However, real-world data is often limited due to privacy concerns, regulatory constraints, or availability issues. This creates a significant barrier for data scientists, researchers, and developers who need reliable data to experiment and innovate.
     </p>
     <p>
-      Whether you're building ML models, testing applications, or conducting research, this system provides a flexible solution for generating high-quality synthetic data without exposing sensitive information.
+      Synthetic data has emerged as a powerful solution to this problem. By generating artificial datasets that preserve the statistical properties of real data, it becomes possible to simulate realistic scenarios without exposing sensitive information.
+    </p>
+    <p>
+      This project focuses on developing a flexible and scalable synthetic data generation system that allows users to create customized datasets based on their specific needs. The system aims to support both numerical and textual data generation while maintaining realism, usability, and efficiency.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.2 Problem Statement</h3>
+    <p>
+      Despite the growing demand for data in machine learning and analytics, accessing high-quality and usable datasets remains a major challenge. Many datasets are either restricted due to privacy regulations, insufficient in size, unbalanced, or not representative of real-world scenarios.
+    </p>
+    <p>
+      Additionally, generating test data for applications often requires significant manual effort, which can be time-consuming and inefficient. Existing solutions are either too complex, lack flexibility, or fail to produce realistic data distributions.
+    </p>
+    <p>
+      This creates a gap for a user-friendly system that can generate synthetic data while preserving statistical integrity and allowing customization based on user-defined parameters.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.3 Objective</h3>
+    <p>
+      The main objective of this project is to design and develop a synthetic data generation system that enables users to easily create realistic and customizable datasets. Specifically, the system aims to:
+    </p>
+    <ul>
+      <li>Allow users to define the number of rows and columns</li>
+      <li>Support both numerical and textual data generation</li>
+      <li>Preserve statistical properties such as distribution, correlation, and variance</li>
+      <li>Provide an efficient and user-friendly interface</li>
+      <li>Enable data export for use in machine learning and analytical tasks</li>
+    </ul>
+    <p>
+      By addressing these goals, the project seeks to simplify data access and accelerate experimentation in data science workflows.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.4 Data Sources</h3>
+    <p>
+      Unlike traditional data science projects, this system does not rely on a fixed dataset. Instead, it dynamically generates synthetic data or learns from user-provided datasets depending on the selected generation method.
+    </p>
+    <p>
+      The project operates with two primary data sources:
+    </p>
+    <ul>
+      <li><strong>Synthetic Data (Generated Data):</strong> The system generates data from scratch based on user-defined parameters such as the number of rows, columns, and data types. This method does not require any real dataset and is designed for fast, flexible, and privacy-preserving data creation.</li>
+      <li><strong>User-Provided Dataset (Reference Data):</strong> For model-based data generation, users can upload a real dataset. The system then learns the statistical structure and relationships within the data using generative models. This enables the creation of synthetic datasets that closely resemble real-world data in terms of distribution and correlations.</li>
+    </ul>
+    <p>
+      This dual approach allows the system to support both rapid data generation and high-fidelity synthetic data modeling, making it suitable for a wide range of use cases.
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.5 Methodology</h3>
+    <p>
+      The system is designed as a modular pipeline that supports multiple synthetic data generation approaches. The overall workflow consists of the following stages:
+    </p>
+    <ul>
+      <li><strong>User Input & Configuration:</strong> Users define the structure of the dataset, including the number of rows, columns, and data types. Alternatively, users can upload an existing dataset for model-based generation.</li>
+      <li><strong>Data Generation Approach Selection:</strong> The system provides two main generation methods: Random (Rule-Based) Generation and Model-Based Generation.</li>
+      <li><strong>Synthetic Data Generation:</strong> In random generation, libraries such as Faker are used to create realistic categorical and structured data. In model-based generation, models such as CTGAN, TVAE, CopulaGAN, and Gaussian Copula are used to produce statistically similar datasets.</li>
+      <li><strong>Data Processing & Storage:</strong> Generated datasets are processed using Pandas and stored efficiently for further use. The system ensures consistency and usability of the generated data.</li>
+      <li><strong>Quality Evaluation (Optional):</strong> Users can evaluate the quality of synthetic data by comparing it with real datasets using various metrics such as statistical similarity, correlation similarity, and machine learning efficacy.</li>
+    </ul>
+    <p style="margin-top: 15px;">
+      This workflow ensures flexibility, scalability, and usability for both technical and non-technical users.
     </p>
   </div>
 
+  <!-- RANDOM DATA GENERATION RESULTS -->
   <div class="project-section">
-    <h2>Problem Statement</h2>
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.6.1 Random Data Generation Results</h3>
     <p>
-      Data scarcity remains one of the most significant bottlenecks in data science and AI development:
+      Data generation is fast and computationally efficient with each execution producing unique datasets due to stochastic behavior. Logical consistency is maintained through predefined rules, making this method highly suitable for testing, prototyping, and rapid development scenarios.
     </p>
+    <img src="images/randsynth.png?v=3.4" alt="Random Synthetic Data Generation" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- MODEL-BASED DATA GENERATION -->
+  <div class="project-section">
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.6.2 Model-Based Data Generation Results</h3>
+    <p>
+      Generated data closely matches the statistical properties of real datasets with distributions of numerical and categorical variables being preserved. Relationships between variables (e.g., correlations) are successfully learned, and rare categories are effectively represented.
+    </p>
+    <p style="margin-top: 15px;">
+      Although this approach requires additional time for model training, it produces significantly more realistic and analytically useful data.
+    </p>
+    
+    <p style="margin-top: 25px; font-weight: 600; color: #555;">Reference Dataset for Model Training:</p>
+    <img src="images/modelbasesyn.png?v=3.4" alt="Model-Based Reference Dataset" style="width: 100%; max-width: 800px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    
+    <p style="margin-top: 25px; font-weight: 600; color: #555;">Generated Synthetic Dataset:</p>
+    <img src="images/prododelsyn.png?v=3.4" alt="Generated Synthetic Data" style="width: 100%; max-width: 800px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- QUALITY EVALUATION METRICS -->
+  <div class="project-section">
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">1.6.3 Quality Evaluation Metrics</h3>
+    <p>
+      To assess the quality of synthetic data, various metrics were used including Statistical Similarity (distribution alignment), Correlation Similarity (relationships between variables), ML Efficacy (model performance trained on synthetic data), and Category Coverage (preservation of categorical values).
+    </p>
+    <p style="margin-top: 15px;">
+      The results demonstrate that model-based approaches, particularly CTGAN, provide high-quality synthetic data suitable for machine learning and analytical tasks.
+    </p>
+    <img src="images/qualitymetrics.png?v=3.4" alt="Quality Evaluation Metrics" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- SYSTEM ARCHITECTURE SECTION -->
+  <div class="project-section">
+    <h2>2. System Architecture</h2>
+    <p>
+      The system is designed as a modular and scalable web-based architecture that integrates data generation, model training, evaluation, and user interaction. The architecture consists of the following core components:
+    </p>
+    
     <ul>
-      <li><strong>Privacy Constraints:</strong> Real-world data is often restricted by regulations like GDPR and HIPAA</li>
-      <li><strong>Data Imbalance:</strong> Datasets often suffer from class imbalance and skewed distributions</li>
-      <li><strong>Limited Availability:</strong> High-quality datasets are expensive and difficult to obtain</li>
-      <li><strong>Testing Challenges:</strong> Generating realistic test data for applications requires significant manual effort</li>
-      <li><strong>Complexity of Existing Tools:</strong> Current solutions lack flexibility and ease of use</li>
+      <li><strong>Frontend Layer:</strong> The user interface is built using HTML, CSS, TailwindCSS, and JavaScript. It provides an interactive and responsive environment where users can configure data generation parameters, upload datasets, and visualize outputs.</li>
+      <li><strong>Backend Layer:</strong> The backend is developed using Flask, which handles user requests, manages application logic, and coordinates communication between different system components. It acts as the central controller of the system.</li>
+      <li><strong>Data Generation Engine:</strong> This module is responsible for generating synthetic data using two approaches: Rule-based generation using predefined logic and libraries, and Model-based generation using generative models trained on real data.</li>
+      <li><strong>Model Training Module:</strong> When a dataset is provided, this component trains generative models such as CTGAN, TVAE, CopulaGAN, and Gaussian Copula to learn the underlying data distribution.</li>
+      <li><strong>Evaluation Module:</strong> This module compares synthetic and real datasets using statistical and machine learning-based metrics to ensure data quality and reliability.</li>
+      <li><strong>Database Layer:</strong> SQLite is used to store user data, configurations, and generated datasets. Flask-SQLAlchemy is used for efficient database management.</li>
+    </ul>
+    
+    <p style="margin-top: 20px;">
+      This modular design ensures flexibility, maintainability, and scalability, allowing the system to be extended with new models, data types, and evaluation methods.
+    </p>
+    
+    <img src="images/ui.jpeg?v=3.4" alt="System User Interface" style="width: 100%; max-width: 800px; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- TECH STACK SECTION -->
+  <div class="project-section">
+    <h2>3. Tech Stack</h2>
+    <p style="margin-bottom: 20px;">
+      The project leverages a combination of modern web development and data science technologies:
+    </p>
+    
+    <ul style="margin-bottom: 25px;">
+      <li><strong>Programming Language:</strong> Python</li>
+      <li><strong>Backend Framework:</strong> Flask</li>
+      <li><strong>Frontend Technologies:</strong> HTML, CSS, TailwindCSS, JavaScript</li>
+      <li><strong>Data Processing & Analysis:</strong> Pandas, NumPy</li>
+      <li><strong>Synthetic Data Generation:</strong> Faker, SDV (Synthetic Data Vault)</li>
+      <li><strong>Generative Models:</strong> CTGAN, TVAE, CopulaGAN, Gaussian Copula</li>
+      <li><strong>Database:</strong> SQLite, Flask-SQLAlchemy</li>
+    </ul>
+    
+    <p style="margin-bottom: 20px;">
+      This stack enables efficient data processing, flexible model integration, and a user-friendly interface for interaction.
+    </p>
+    
+    <img src="images/techstack.jpg?v=3.4" alt="Technology Stack" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <!-- KEY FEATURES SECTION -->
+  <div class="project-section">
+    <h2>4. Key Features</h2>
+    <ul>
+      <li><strong>Dual Data Generation Approach:</strong> Supports both rule-based (random) and model-based synthetic data generation</li>
+      <li><strong>Custom Dataset Configuration:</strong> Users can define the number of rows, columns, and data types to generate fully customized datasets</li>
+      <li><strong>Real Data Learning Capability:</strong> Allows users to upload real datasets and generate statistically similar synthetic data using generative models</li>
+      <li><strong>Multiple Generative Models:</strong> Integrates advanced models such as CTGAN, TVAE, CopulaGAN, and Gaussian Copula</li>
+      <li><strong>Data Quality Evaluation:</strong> Provides multiple evaluation metrics including statistical similarity, correlation similarity, ML efficacy, and category coverage</li>
+      <li><strong>User-Friendly Web Interface:</strong> Interactive and responsive interface for seamless user experience</li>
+      <li><strong>Fast and Scalable Data Generation:</strong> Efficient generation process suitable for both small and large datasets</li>
+      <li><strong>Privacy-Preserving Data Solution:</strong> Enables data sharing and experimentation without exposing sensitive information</li>
+      <li><strong>Extensible Architecture:</strong> Designed to support future extensions such as time-series data, visualization modules, and API integration</li>
     </ul>
   </div>
 
-  <div class="project-section">
-    <h2>Objectives</h2>
-    <p>This project aims to:</p>
-    <ul>
-      <li>Enable users to define custom dataset parameters (rows, columns, distributions)</li>
-      <li>Support both numerical and categorical data generation</li>
-      <li>Preserve statistical properties including correlations and variance</li>
-      <li>Provide an intuitive, user-friendly interface</li>
-      <li>Ensure data privacy and compliance with regulations</li>
-      <li>Export datasets in multiple formats (CSV, JSON, Parquet)</li>
-    </ul>
-  </div>
-
-  <div class="project-tech">
-    <strong>Technologies & Tools:</strong>
+  <div class="project-tech" style="margin-top: 40px; margin-bottom: 40px;">
+    <strong>Core Technologies:</strong>
     <div class="tech-tags">
       <span class="tech-tag">Python</span>
+      <span class="tech-tag">Flask</span>
       <span class="tech-tag">TensorFlow</span>
       <span class="tech-tag">Pandas</span>
       <span class="tech-tag">NumPy</span>
-      <span class="tech-tag">Scikit-learn</span>
-      <span class="tech-tag">Synthetic Data Vault</span>
-      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">CTGAN</span>
+      <span class="tech-tag">SDV</span>
+      <span class="tech-tag">SQLite</span>
+      <span class="tech-tag">HTML/CSS</span>
+      <span class="tech-tag">JavaScript</span>
     </div>
-  </div>
-
-  <div class="project-section">
-    <h2>Implementation Approach</h2>
-    <p>
-      The system is built using a modular architecture that combines multiple data generation strategies:
-    </p>
-    <ul>
-      <li><strong>Rule-Based Generation:</strong> Define constraints and patterns for specific data types</li>
-      <li><strong>GAN-Based Generation:</strong> Use Generative Adversarial Networks for realistic data synthesis</li>
-      <li><strong>Copula Models:</strong> Preserve complex correlations between variables</li>
-      <li><strong>Statistical Analysis:</strong> Match distributions of generated data to source datasets</li>
-    </ul>
-  </div>
-
-  <div class="project-section">
-    <h2>Key Features</h2>
-    <ul>
-      <li>Custom parameter configuration for flexible data generation</li>
-      <li>Support for multiple data types and distributions</li>
-      <li>Privacy-preserving synthesis with differential privacy options</li>
-      <li>Quality metrics and validation reports</li>
-      <li>Batch processing for large-scale dataset generation</li>
-      <li>RESTful API for integration with existing pipelines</li>
-      <li>Web-based dashboard for easy configuration</li>
-    </ul>
-  </div>
-
-  <div class="project-section">
-    <h2>Results & Impact</h2>
-    <p>
-      This project demonstrates the feasibility of generating synthetic data that closely matches real-world statistical properties while maintaining privacy. The system can be applied across industries to:
-    </p>
-    <ul>
-      <li>Accelerate machine learning model development and testing</li>
-      <li>Enable safe data sharing across organizations</li>
-      <li>Support research with realistic but privacy-safe datasets</li>
-      <li>Reduce costs associated with data collection and labeling</li>
-    </ul>
   </div>
 
   <a href="index.html" class="back-link">← Back to Projects</a>
