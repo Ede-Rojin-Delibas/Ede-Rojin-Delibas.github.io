@@ -580,22 +580,22 @@ footer {
   justify-content: center;
   width: 50px;
   height: 50px;
-  background: white;
-  border: 2.5px solid #a8d5ba;
+  background: linear-gradient(135deg, #a8d5ba, #7ecba3);
+  border: none;
   border-radius: 10px;
   text-decoration: none;
-  color: #7ecba3;
+  color: white;
   font-weight: 700;
   font-size: 18px;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 4px 15px rgba(168, 213, 186, 0.12);
+  box-shadow: 0 4px 15px rgba(168, 213, 186, 0.25);
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, #a8d5ba, #7ecba3);
+  background: linear-gradient(135deg, #7ecba3, #5ab896);
   color: white;
   transform: translateY(-6px) scale(1.1);
-  box-shadow: 0 10px 30px rgba(168, 213, 186, 0.3);
+  box-shadow: 0 10px 30px rgba(126, 203, 163, 0.4);
   border-color: transparent;
 }
 
