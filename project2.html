@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Sentiment Analysis Project - Ede Rojin DELİBAŞ</title>
-  <link rel="stylesheet" href="style.css?v=3.8">
+  <link rel="stylesheet" href="style.css?v=3.9">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -29,55 +29,204 @@
 
   <div class="project-header">
     <div class="category">Natural Language Processing</div>
-    <h1>Sentiment Analysis Project</h1>
-    <p style="color: #999; margin-top: 15px;">Advanced NLP system for sentiment classification and analysis</p>
+    <h1>Sentiment Analysis</h1>
+    <p style="color: #999; margin-top: 15px;">Machine learning-based sentiment classification from social media text</p>
   </div>
 
-  <img src="images/sentiment_animation.jpg" alt="Sentiment Analysis Project" class="project-image">
+  <img src="images/sentiment/sentiment_animation.jpg" alt="Sentiment Analysis Project" class="project-image">
 
   <div class="project-section">
-    <h2>Overview</h2>
+    <h2>1. Introduction</h2>
     <p>
-      [Buraya kendi proje açıklamanızı yazın]
+      With the rapid growth of social media platforms, analyzing user-generated content has become essential for understanding public opinion. Sentiment analysis enables businesses and organizations to automatically detect the emotional tone behind text data.
     </p>
-  </div>
-
-  <div class="project-section">
-    <h2>Problem Statement</h2>
     <p>
-      [Buraya sorunu açıklayın]
+      In this project, I developed a machine learning-based sentiment analysis system to classify social media comments into different sentiment categories using natural language processing (NLP) techniques.
     </p>
+    <img src="images/sentiment/sentiment_distribution.png?v=3.9" alt="Sentiment Distribution" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
   </div>
 
   <div class="project-section">
-    <h2>Solution & Approach</h2>
+    <h2>2. Problem Statement</h2>
     <p>
-      [Buraya çözüm yolunuzu yazın]
+      Organizations receive a large volume of unstructured textual data from social media, making it difficult to manually analyze user sentiment. The key challenges are:
     </p>
-  </div>
-
-  <div class="project-section">
-    <h2>Key Features</h2>
     <ul>
-      <li>[Özellik 1]</li>
-      <li>[Özellik 2]</li>
-      <li>[Özellik 3]</li>
+      <li>Automatically classifying text into sentiment categories</li>
+      <li>Handling noisy and unstructured text data</li>
+      <li>Achieving reliable performance across different sentiment classes</li>
     </ul>
   </div>
 
-  <div class="project-tech">
-    <strong>Technologies & Tools:</strong>
-    <div class="tech-tags">
-      <span class="tech-tag">[Teknoloji 1]</span>
-      <span class="tech-tag">[Teknoloji 2]</span>
-      <span class="tech-tag">[Teknoloji 3]</span>
-    </div>
+  <div class="project-section">
+    <h2>3. Objective</h2>
+    <ul>
+      <li>Build a model to classify text into sentiment categories (positive, negative, neutral)</li>
+      <li>Apply NLP preprocessing techniques to improve text quality</li>
+      <li>Compare multiple machine learning models</li>
+      <li>Optimize the best-performing model</li>
+    </ul>
   </div>
 
   <div class="project-section">
-    <h2>Results & Impact</h2>
+    <h2>4. Data Source</h2>
+    <ul>
+      <li><strong>Dataset:</strong> Social media sentiment dataset (Kaggle)</li>
+      <li><strong>Data type:</strong> User-generated text (comments/posts)</li>
+      <li><strong>Target variable:</strong> Sentiment label (Positive, Negative, Neutral)</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>5. Methodology</h2>
+    
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.1 Project Planning</h3>
+    <ul>
+      <li>Dataset selection and exploration</li>
+      <li>Identification of features and target variable</li>
+      <li>Data cleaning and preprocessing pipeline</li>
+      <li>Model selection and training strategy</li>
+      <li>Hyperparameter optimization</li>
+      <li>Evaluation and visualization</li>
+    </ul>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.2 Data Preprocessing & NLP</h3>
     <p>
-      [Sonuçları ve etkisini yazın]
+      To improve text quality and model performance, several NLP techniques were applied:
+    </p>
+    <ul>
+      <li>Tokenization - Breaking text into individual words</li>
+      <li>Stemming - Reducing words to root form</li>
+      <li>Text tagging - Part-of-speech annotation</li>
+      <li>Stopwords removal - Filtering common words</li>
+      <li>Parsing - Syntactic analysis</li>
+      <li>Removal of unnecessary columns and handling missing data</li>
+    </ul>
+    <p style="margin-top: 15px;"><strong>Libraries used:</strong> NLTK (Natural Language Toolkit), Pandas, NumPy, Matplotlib, Seaborn</p>
+    <img src="images/sentiment/commonwords.png?v=3.9" alt="Most Common Words" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.3 Feature Preparation</h3>
+    <ul>
+      <li>Text data transformed into numerical representations using TF-IDF (Term Frequency-Inverse Document Frequency)</li>
+      <li>Cleaned and structured data for machine learning models</li>
+    </ul>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.4 Model Training</h3>
+    <p style="margin-bottom: 20px;">
+      Multiple machine learning algorithms were trained and evaluated:
+    </p>
+    <table style="width: 100%; max-width: 600px; margin: 20px 0; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+      <tr style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white;">
+        <th style="padding: 12px; text-align: left; font-weight: 600;">Model</th>
+        <th style="padding: 12px; text-align: center; font-weight: 600;">Accuracy</th>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Passive Aggressive Classifier</td>
+        <td style="padding: 12px; text-align: center; color: #ef4444; font-weight: 700;">71.42%</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Logistic Regression</td>
+        <td style="padding: 12px; text-align: center;">63.26%</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Random Forest</td>
+        <td style="padding: 12px; text-align: center;">65%</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Support Vector Machine (SVM)</td>
+        <td style="padding: 12px; text-align: center;">59%</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;">Multinomial Naive Bayes</td>
+        <td style="padding: 12px; text-align: center;">61.9%</td>
+      </tr>
+    </table>
+    <p style="margin-top: 20px; padding: 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px;">
+      <strong>Best-performing model:</strong> Passive Aggressive Classifier with 71.42% accuracy
+    </p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.5 Hyperparameter Optimization</h3>
+    <ul>
+      <li>Applied <strong>RandomizedSearchCV</strong> on the Passive Aggressive Classifier</li>
+      <li>Result: Accuracy improved to <strong>72.78%</strong></li>
+      <li>Improvement was limited, indicating model performance plateau</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>6. Evaluation & Results</h2>
+    <p style="margin-bottom: 20px;">
+      Detailed evaluation using confusion matrix revealed performance across sentiment categories:
+    </p>
+    <table style="width: 100%; max-width: 600px; margin: 20px 0; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+      <tr style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white;">
+        <th style="padding: 12px; text-align: left; font-weight: 600;">Sentiment</th>
+        <th style="padding: 12px; text-align: center; font-weight: 600;">Accuracy</th>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Positive</td>
+        <td style="padding: 12px; text-align: center; color: #ef4444; font-weight: 700;">83.3%</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">Negative</td>
+        <td style="padding: 12px; text-align: center; color: #ef4444; font-weight: 700;">81.3%</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px;">Neutral</td>
+        <td style="padding: 12px; text-align: center;">56.4%</td>
+      </tr>
+    </table>
+
+    <p style="margin-top: 25px; padding: 15px; background: #fffbf0; border-left: 4px solid #facc15; border-radius: 4px;">
+      <strong>Key Insight:</strong> The model performs well for positive and negative sentiments, but struggles with neutral classification. Binary-like sentiment (positive vs negative) is easier to classify, while neutral sentiment is inherently ambiguous and harder to model.
+    </p>
+
+    <img src="images/sentiment/confusionmatrix.png?v=3.9" alt="Confusion Matrix" style="width: 100%; max-width: 700px; margin: 30px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+    <p style="margin-top: 30px; font-weight: 600; color: #555;">Positive Sentiment Analysis:</p>
+    <img src="images/sentiment/wordcloudp.png?v=3.9" alt="Positive Sentiment Word Cloud" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+    <p style="margin-top: 25px; font-weight: 600; color: #555;">Negative Sentiment Analysis:</p>
+    <img src="images/sentiment/wordcloudn.png?v=3.9" alt="Negative Sentiment Word Cloud" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <div class="project-section">
+    <h2>7. Business Value</h2>
+    <p>
+      This system can be used to:
+    </p>
+    <ul>
+      <li>Monitor brand perception on social media</li>
+      <li>Analyze customer feedback automatically</li>
+      <li>Detect negative sentiment early and take action</li>
+    </ul>
+  </div>
+
+  <div class="project-tech" style="margin-top: 50px; margin-bottom: 40px; background: linear-gradient(135deg, rgba(168, 213, 186, 0.08) 0%, rgba(126, 203, 163, 0.08) 100%); border-left: 5px solid #a8d5ba;">
+    <strong style="font-size: 18px; color: #222; display: block; margin-bottom: 20px;">Core Technologies</strong>
+    <div class="tech-tags">
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Python</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Pandas</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">NumPy</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">NLTK</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Scikit-learn</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Matplotlib</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Seaborn</span>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Projects</a>
+
+</div>
+
+<footer>
+  <p>© 2026 Ede Rojin DELİBAŞ. All rights reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
     </p>
   </div>
 
