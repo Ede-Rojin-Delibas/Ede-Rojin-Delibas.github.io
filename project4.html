@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Commerce EDA - Ede Rojin DELİBAŞ</title>
+  <link rel="stylesheet" href="style.css?v=4.4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="header-content">
+    <div class="logo-section">
+      <div class="logo" style="width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="width: 100%; height: 100%; position: relative;">
+          <!-- Data point circles -->
+          <div style="position: absolute; width: 8px; height: 8px; background: #a8d5ba; border-radius: 50%; top: 5px; left: 50%; transform: translateX(-50%);"></div>
+          <div style="position: absolute; width: 8px; height: 8px; background: #7ecba3; border-radius: 50%; top: 50%; left: 15%; transform: translate(-50%, -50%);"></div>
+          <div style="position: absolute; width: 8px; height: 8px; background: #a8d5ba; border-radius: 50%; bottom: 8px; right: 12%;"></div>
+          <div style="position: absolute; width: 6px; height: 6px; background: #7ecba3; border-radius: 50%; top: 45%; right: 18%;"></div>
+          <!-- Connection lines using pseudo-effect -->
+          <svg style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" viewBox="0 0 55 55">
+            <line x1="27" y1="8" x2="15" y2="27" stroke="#a8d5ba" stroke-width="1" opacity="0.6"/>
+            <line x1="27" y1="8" x2="40" y2="45" stroke="#7ecba3" stroke-width="1" opacity="0.6"/>
+            <line x1="15" y1="27" x2="40" y2="45" stroke="#a8d5ba" stroke-width="1" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="nav-section">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="project-detail">
+
+  <div class="project-header">
+    <div class="category">Data Science</div>
+    <h1>E-Commerce Exploratory Data Analysis</h1>
+    <p style="color: #999; margin-top: 15px;">Uncovering customer behavior, revenue drivers, and operational insights from transaction data</p>
+  </div>
+
+  <img src="images/eda/EDA_animation.jpg?v=4.4" alt="E-Commerce EDA" class="project-image">
+
+  <div class="project-section">
+    <h2>1. Introduction</h2>
+    <p>
+      In today's highly competitive e-commerce landscape, understanding customer behavior, revenue drivers, and operational efficiency is crucial for sustainable growth.
+    </p>
+    <p>
+      This project explores a real-world e-commerce dataset to uncover key patterns in customer purchasing behavior, product performance, and delivery operations. Through comprehensive exploratory data analysis (EDA), the goal is to transform raw transactional data into actionable business insights.
+    </p>
+  </div>
+
+  <div class="project-section">
+    <h2>2. Problem Statement</h2>
+    <p>
+      E-commerce businesses often struggle with low customer retention, inefficient logistics, and unclear revenue drivers.
+    </p>
+    <p style="margin-top: 15px; font-weight: 600; color: #333;">Key questions addressed in this project:</p>
+    <ul>
+      <li>What drives revenue in the business?</li>
+      <li>Why is customer retention low?</li>
+      <li>How does delivery performance affect customer satisfaction?</li>
+      <li>Are there seasonal trends affecting sales performance?</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>3. Objectives</h2>
+    <p style="margin-bottom: 15px;">The main objectives of this project are:</p>
+    <ul>
+      <li>Analyze customer purchasing behavior</li>
+      <li>Identify key revenue drivers</li>
+      <li>Evaluate delivery performance and its impact on satisfaction</li>
+      <li>Detect seasonal trends and anomalies</li>
+      <li>Provide actionable business recommendations</li>
+    </ul>
+  </div>
+
+  <div class="project-section">
+    <h2>4. Data Sources</h2>
+    <p style="margin-bottom: 15px;">
+      The dataset consists of <strong>112,650 transaction-level records</strong> and <strong>36 features</strong>, covering the period between 2016 and 2018.
+    </p>
+    <p style="margin-bottom: 15px;">
+      Each row represents an individual order item, including:
+    </p>
+    <ul>
+      <li>Product details</li>
+      <li>Customer information</li>
+      <li>Payment data</li>
+      <li>Delivery timestamps</li>
+      <li>Review scores</li>
+    </ul>
+    <p>
+      Additional features were engineered to support time-based and behavioral analysis.
+    </p>
+  </div>
+
+  <div class="project-section">
+    <h2>5. Methodology</h2>
+    
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.1 Data Preparation</h3>
+    <ul>
+      <li>Merged multiple datasets into a unified structure</li>
+      <li>Converted data types (timestamps, categorical features)</li>
+      <li>Handled missing values and outliers</li>
+      <li>Engineered new features:
+        <ul style="margin-top: 10px;">
+          <li>Revenue</li>
+          <li>Delivery time</li>
+          <li>Time-based features (month, weekday)</li>
+          <li>Delivery segments</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.2 Univariate Analysis</h3>
+    <ul style="margin-bottom: 15px;">
+      <li>Analyzed distributions of price, revenue, freight cost</li>
+      <li>Identified right-skewed distributions</li>
+      <li>Detected significant outliers</li>
+    </ul>
+    <img src="images/eda/revenue_distribution.png?v=4.4" alt="Revenue Distribution" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Revenue Distribution:</strong> The histogram shows a right-skewed distribution with most transactions clustered at lower values, indicating a long tail of high-value orders.</p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.3 Bivariate Analysis</h3>
+    <p style="margin-bottom: 15px;">
+      Examined relationships between:
+    </p>
+    <ul style="margin-bottom: 15px;">
+      <li>Price vs Payment Value</li>
+      <li>Delivery Time vs Review Score</li>
+      <li>Freight vs Weight</li>
+    </ul>
+    <img src="images/eda/price_distribution.png?v=4.4" alt="Price Distribution" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Price Patterns:</strong> Similar right-skewed distribution observed, with most products priced in the lower range.</p>
+    
+    <img src="images/eda/payment_value_distribution.png?v=4.4" alt="Payment Value Distribution" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.4 Multivariate Analysis</h3>
+    <p style="margin-bottom: 15px;">
+      Correlation heatmap used to analyze relationships across multiple variables. Identified strong relationships between Price & Payment Value and Weight & Freight Cost.
+    </p>
+    <img src="images/eda/correlation_matrix.png?v=4.4" alt="Correlation Matrix" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Correlations:</strong> The heatmap reveals strong positive correlations between product characteristics and their pricing/cost metrics.</p>
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.5 Segment Analysis</h3>
+    <p style="margin-bottom: 15px;">
+      Segmented data by:
+    </p>
+    <ul style="margin-bottom: 15px;">
+      <li>Product categories</li>
+      <li>Delivery speed</li>
+      <li>Payment types</li>
+    </ul>
+    <img src="images/eda/product_cat_top_values.png?v=4.4" alt="Top Product Categories" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Category Performance:</strong> Certain categories consistently outperform others in terms of order volume.</p>
+    
+    <img src="images/eda/category_monthly_revenue.png?v=4.4" alt="Category Monthly Revenue" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+    <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 20px; color: #333; font-weight: 600;">5.6 Time-Based Analysis</h3>
+    <p style="margin-bottom: 15px;">
+      Monthly revenue trends analyzed, weekly purchase patterns examined, and seasonal effects and anomalies identified.
+    </p>
+    <img src="images/eda/monthly_revenue_trend.png?v=4.4" alt="Monthly Revenue Trend" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Revenue Trends:</strong> Clear seasonal patterns with a notable anomaly in September showing a sharp decline.</p>
+    
+    <img src="images/eda/orders_by_month.png?v=4.4" alt="Orders by Month" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+  </div>
+
+  <div class="project-section">
+    <h2>6. Evaluation & Results</h2>
+    <p style="margin-bottom: 20px;">
+      The analysis revealed several important patterns:
+    </p>
+    <ul style="margin-bottom: 20px;">
+      <li>Revenue distribution is highly skewed, with a small number of high-value transactions contributing significantly</li>
+      <li>Most customers make only a single purchase, indicating low retention</li>
+      <li>Delivery time is generally slow, with potential impact on customer satisfaction</li>
+      <li>Strong seasonality patterns exist, with a sharp drop observed in September</li>
+    </ul>
+
+    <img src="images/eda/log_transform_revenue.png?v=4.4" alt="Log-Transformed Revenue" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Log Transformation:</strong> Applying log transformation to revenue helps normalize the heavily skewed distribution for better statistical analysis.</p>
+
+    <img src="images/eda/delivery_time_distribution.png?v=4.4" alt="Delivery Time Distribution" style="width: 100%; max-width: 800px; margin: 25px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="margin-top: 15px; font-size: 14px; color: #666;"><strong>Delivery Performance:</strong> Most deliveries take longer than optimal, suggesting logistics optimization opportunities.</p>
+  </div>
+
+  <div class="project-section">
+    <h2>7. Key Business Insights & Business Value</h2>
+    
+    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 18px; color: #333; font-weight: 600;">7.1 Revenue Insight</h3>
+    <p style="margin-bottom: 15px;">
+      Revenue is primarily driven by a small number of high-value transactions.
+    </p>
+    <p style="padding: 12px 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px; margin-bottom: 20px;">
+      <strong>Business Value:</strong> Increase average order value | Focus on premium customers
+    </p>
+
+    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 18px; color: #333; font-weight: 600;">7.2 Customer Insight</h3>
+    <p style="margin-bottom: 15px;">
+      Customer retention is low, with most users making only one purchase.
+    </p>
+    <img src="images/eda/customer_states_top.png?v=4.4" alt="Top Customer States" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="padding: 12px 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px; margin-top: 15px;">
+      <strong>Business Value:</strong> Loyalty programs needed | Reduce acquisition cost
+    </p>
+
+    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 18px; color: #333; font-weight: 600;">7.3 Logistics Insight</h3>
+    <p style="margin-bottom: 15px;">
+      Delivery delays negatively impact customer satisfaction.
+    </p>
+    <img src="images/eda/delivery_speed_revenue.png?v=4.4" alt="Delivery Speed vs Revenue" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="padding: 12px 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px; margin-top: 15px;">
+      <strong>Business Value:</strong> Optimize logistics | Improve customer experience
+    </p>
+
+    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 18px; color: #333; font-weight: 600;">7.4 Category Insight</h3>
+    <p style="margin-bottom: 15px;">
+      A small number of categories dominate total revenue.
+    </p>
+    <img src="images/eda/category_vs_revenue.png?v=4.4" alt="Category vs Revenue" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="padding: 12px 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px; margin-top: 15px;">
+      <strong>Business Value:</strong> Focus inventory & marketing
+    </p>
+
+    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 18px; color: #333; font-weight: 600;">7.5 Trend Insight</h3>
+    <p style="margin-bottom: 15px;">
+      Strong seasonality exists with a critical anomaly in September.
+    </p>
+    <img src="images/eda/delivery_time_trend.png?v=4.4" alt="Delivery Time Trend" style="width: 100%; max-width: 600px; margin: 15px 0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+    <p style="padding: 12px 15px; background: #f0f9f8; border-left: 4px solid #a8d5ba; border-radius: 4px; margin-top: 15px;">
+      <strong>Business Value:</strong> Optimize campaigns | Investigate operational issues
+    </p>
+  </div>
+
+  <div class="project-tech" style="margin-top: 50px; margin-bottom: 40px; background: linear-gradient(135deg, rgba(168, 213, 186, 0.08) 0%, rgba(126, 203, 163, 0.08) 100%); border-left: 5px solid #a8d5ba;">
+    <strong style="font-size: 18px; color: #222; display: block; margin-bottom: 20px;">Tools & Technologies</strong>
+    <div class="tech-tags">
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Python</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Pandas</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">NumPy</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Matplotlib</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Seaborn</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">SQL</span>
+      <span class="tech-tag" style="background: linear-gradient(135deg, #a8d5ba, #7ecba3); color: white; border: none;">Jupyter Notebook</span>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Projects</a>
+
+</div>
+
+<footer>
+  <p>© 2026 Ede Rojin DELİBAŞ. All rights reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>
